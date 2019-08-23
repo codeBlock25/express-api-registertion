@@ -1,0 +1,25 @@
+{
+  "name": "full_registeration",
+  "version": "1.0.0",
+  "description": "full signup and registeration app with node having email and sms text validation",
+  "main": "server.js",
+  "repository": "https://github.com/codeblock25",
+  "author": "Amos Daniel <codeBlock25>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.10",
+    "nexmo": "^2.4.1",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.1"
+  }
+}
