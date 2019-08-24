@@ -29,9 +29,9 @@ var userSchema = new schema({
     isRemember: {
         type: Boolean
     },
-    deviceType: {
-        type: String
-    },
+    deviceType: [
+        String
+    ],
     isVerified: {
         type: Boolean
     },
@@ -40,7 +40,7 @@ var userSchema = new schema({
         required: true
     },
     vCode:{
-        type: String,
+        type: Number,
         required: true
     },
     date: {

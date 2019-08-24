@@ -1,11 +1,22 @@
+// importing dependences
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+
+// initiating express
 const server = express();
+
+// importing route
 const customRoute = require('./routes');
+
+// mongodb address ...this is for locally hosted database 
 const _url_ = 'mongodb://localhost:27017/project';
+
+// setting local port
 const port = 1070;
+
+// cors option
 const corsOptions = {
     // change this to your url or use * for any url
     "origin": "http://localhost:5500/",
@@ -20,7 +31,7 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
 
   // initiating cors
-server.use(cors())
+server.use(cors(corsOptions))
 
 // connecting to mongodb 
 mongoose
@@ -28,16 +39,13 @@ mongoose
     _url_,
     {useNewUrlParser: true}
 ).then(() => {
-    console.log('monogdb connect we can now make query to the database')
+    console.log('monogdb connect well, we can now make queries to the database')
 }).catch((err) => {
     console.log(err);
 });
 
 // initiating routes 
 server.use("/api",customRoute);
-server.get("/s",(req,res)=>{
-    res.send('welcome')
-})
 
 // starting server
 server.listen(port,()=>{
