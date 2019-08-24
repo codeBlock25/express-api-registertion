@@ -3,9 +3,9 @@
 Express-API-Registration is a server application built on Nodejs to handle sign-up, sign-in with Email and Phone number validation and forgot password. This also has access token authentication, cors white listing and uses mongodb as database .
 
 ## install
-git clone ```https://github.com/codeBlock25/express-api-registertion.git```
+git clone ```https://github.com/codeBlock25/express-api-registration.git```
 
-cd express-api-registertion
+cd express-api-registration
 
 yarn install or npm install
 ## start Server
